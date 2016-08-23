@@ -126,9 +126,16 @@ If you did not see any problem, activate RSS by setting the CS option::
 Agents
 ------
 
-There are few agents that are required:
+The main agent is: 
 
-    - SummarizeLogsAgent
+   - ElementInspectorAgent
 
-Please, install them and make sure they are up and running. Old agents, like the
-*InspectorAgent(s)* can be safely removed.
+which applies policies to elements, being them sites or resource.
+
+There are few other agents that are also required:
+
+    - SummarizeLogsAgent (that would generate the history tables)
+    - CacheFeederAgent (that adds to the ResourceManagementDB cache of monitoring information to be used by RSS policies)
+    - TokenAgent (for re-estabilishing the ownership of status changes - usually between human and RSS services)
+    - EmailAgent (for sending grouped notification emails)
+
